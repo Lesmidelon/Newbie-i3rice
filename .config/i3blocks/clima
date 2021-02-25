@@ -1,0 +1,12 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+        1) curl wttr.in/?format="%c+%t+%h" && alacritty -e sh -c 'curl wttr.in; read' ;;
+        *) curl wttr.in/?format="%c+%t+%h" ;;
+esac
+
+ping -q -w 1 -c 1 `ip r | grep default | cut -d ' ' -f 3` >/dev/null || exit
+
+curl wttr.in > ~/.weatherReport
+
+
