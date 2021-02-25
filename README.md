@@ -1,2 +1,2 @@
-# Newbie-i3rice
+# i3Wm
 first rice by a newbie :)
